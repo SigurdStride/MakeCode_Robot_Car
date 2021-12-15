@@ -1,6 +1,7 @@
 let currentDistanceLeft = 0
 let currentDistanceRight = 0
 let direction = "none"
+
 basic.forever(function () {
     if (direction == "right") {
         maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOn)
@@ -40,6 +41,7 @@ basic.forever(function () {
         maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOff)
     }
 })
+
 basic.forever(function () {
     if (maqueen.Ultrasonic(PingUnit.Centimeters) > 10) {
         direction = "none"
